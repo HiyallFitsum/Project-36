@@ -23,7 +23,7 @@ function preload()
 function setup() {
   createCanvas(displayWidth, displayHeight);
 
-  var dog = createSprite(displayWidth - 200,250,25,25);
+  dog = createSprite(displayWidth - 200,250,25,25);
   dog.addImage(dogImage);
   dog.scale = 0.25;
 
@@ -101,6 +101,8 @@ function feedTheDog(){
 
 function readStock(data){
   foodStock=data.val();
+  foodObj.updateFoodStock(foodStock);
+
 }
 
 function writeStock(x){
